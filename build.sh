@@ -21,6 +21,10 @@ echo Build started on `date`
 echo "Print working directory"
 pwd
 wget https://s3.amazonaws.com/bin_artifacts/ispc-v1.9.1-linux.tar
+tar -xzvf ispc-v1.9.1-linux.tar
+cp ./ispc-v1.9.1-linux/ispc ./ispc
+cd vectorAdd
+bash build.sh
 
 echo "Home directory files"
 ls -la ~/

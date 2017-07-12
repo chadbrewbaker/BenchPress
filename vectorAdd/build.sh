@@ -1,4 +1,4 @@
-ispc addVecISPC.ispc -h addVecISPC.h -o addVecISPC.o -O3 --target=host
+../ispc addVecISPC.ispc -h addVecISPC.h -o addVecISPC.o -O3 --target=host
 clang -shared -o addVecISPC.dylib addVecISPC.o -O3
 clang -shared -o addVec.dylib addVec.c -O3
 clang -shared -o addVec0.dylib addVec.c -O0
