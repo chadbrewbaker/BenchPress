@@ -21,7 +21,8 @@ int main() {
 
   void *c_handle = dlopen("addVec.so", RTLD_LAZY);
   if (c_handle == NULL) {
-    printf("Error opening adVec.so");
+    printf("Error opening addVec.so");
+    fputs(dlerror(), stdout);
     return 1;
   }
   addVec = dlsym(c_handle, "addVec");
