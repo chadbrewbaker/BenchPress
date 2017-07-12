@@ -19,9 +19,9 @@ int main() {
   int *b = (int *)malloc(sizeof(int) * SIZE);
   void (*addVec)(int *, int *, int *, int);
 
-  void *c_handle = dlopen("addVec.dylib", RTLD_LAZY);
+  void *c_handle = dlopen("addVec.so", RTLD_LAZY);
   if (c_handle == NULL) {
-    printf("Error opening adVec.dylib");
+    printf("Error opening adVec.so");
     return 1;
   }
   addVec = dlsym(c_handle, "addVec");
