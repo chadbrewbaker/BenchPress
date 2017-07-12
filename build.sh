@@ -17,24 +17,24 @@ apt-get update -y
 apt-get update -y
 apt-get install -y clang-3.9 lldb-3.9 libc++-dev libc++abi-dev
 
-which clang
-which clang-3.9
+#which clang
+#which clang-3.9
 
 #aws s3 cp s3://bin_artifacts/ispc-v1.9.1-linux.tar .
 #tar -xzvf ispc-v1.9.1-linux.tar
 echo "Print working directory"
 pwd
-wget https://s3.amazonaws.com/bin_artifacts/ispc-v1.9.1-linux.tar
+wget -q https://s3.amazonaws.com/bin_artifacts/ispc-v1.9.1-linux.tar
 tar -xf ispc-v1.9.1-linux.tar
 cp ./ispc-v1.9.1-linux/ispc ./ispc
 cd vectorAdd
-bash build.sh
+bash buildLinux.sh
 
-echo "Home directory files"
-ls -la ~/
-echo "Local directory files"
-ls -la 
-cat /proc/cpuinfo > cpuinfo.txt
+#echo "Home directory files"
+#ls -la ~/
+#echo "Local directory files"
+#ls -la 
+#cat /proc/cpuinfo > cpuinfo.txt
 
 
 #wget http://sourceforge.net/projects/cxxtest/files/cxxtest/4.3/cxxtest-4.3.tar.gz
