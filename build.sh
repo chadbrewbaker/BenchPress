@@ -1,7 +1,7 @@
 #!/bin/bash
 echo Build started on `date`
-apt-get update -y
-apt-get install -y software-properties-common
+#apt-get update -y
+#apt-get install -y software-properties-common
 #apt-add-repository "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.8 main"
 #add-apt-repository ppa:george-edison55/cmake-3.x
 #add-apt-repository ppa:ubuntu-toolchain-r/test
@@ -16,10 +16,15 @@ apt-get install -y software-properties-common
 #apt-get update -y
 #apt-get install -y clang-3.8 lldb-3.8
 
-aws s3 cp s3://bin_artifacts/ispc-v1.9.1-linux.tar .
-tar -xzvf ispc-v1.9.1-linux.tar
-ls
-cat /proc/cpuinfo
+which aws
+#aws s3 cp s3://bin_artifacts/ispc-v1.9.1-linux.tar .
+#tar -xzvf ispc-v1.9.1-linux.tar
+pwd
+echo "Home directory files"
+ls -la ~/
+echo "Local directory files"
+ls -la 
+cat /proc/cpuinfo > cpuinfo.txt
 
 
 #wget http://sourceforge.net/projects/cxxtest/files/cxxtest/4.3/cxxtest-4.3.tar.gz
