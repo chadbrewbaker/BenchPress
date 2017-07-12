@@ -1,20 +1,24 @@
 #!/bin/bash
 echo Build started on `date`
-#apt-get update -y
-#apt-get install -y software-properties-common
-#apt-add-repository "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.8 main"
+apt-get update -y
+apt-get install -y software-properties-common
+apt-add-repository "deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.8 main"
 #add-apt-repository ppa:george-edison55/cmake-3.x
-#add-apt-repository ppa:ubuntu-toolchain-r/test
-#deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty-3.8 main
-#deb-src http://apt.llvm.org/trusty/ llvm-toolchain-trusty-3.8 main
-#wget -O - http://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
-#apt-get update -y
+add-apt-repository ppa:ubuntu-toolchain-r/test
+deb http://apt.llvm.org/trusty/ llvm-toolchain-trusty main
+deb-src http://apt.llvm.org/trusty/ llvm-toolchain-trusty main
+
+wget -O - http://apt.llvm.org/llvm-snapshot.gpg.key|sudo apt-key add -
+apt-get update -y
 #apt-get install -y llvm-toolchain-3.6 clang-3.6  lldb-3.6 libc++-dev openjdk-7-jdk swig m4 libgmp-dev libboost-dev libgmp-dev libboost-thread-dev libcln-dev antlr3 libantlr3c-dev
 #apt-get install -y clang-3.8-doc libclang-common-3.8-dev libclang-3.8-dev libclang1-3.8 libclang1-3.8-dbg libllvm-3.8-ocaml-dev libllvm3.8 libllvm3.8-dbg lldb-3.8 llvm-3.8 llvm-3.8-dev llvm-3.8-doc llvm-3.8-examples llvm-3.8-runtime clang-modernize-3.8 clang-format-3.8 python-clang-3.8 lldb-3.8-dev
 #curl http://llvm.org/apt/llvm-snapshot.gpg.key | apt-key add
 #echo 'deb http://llvm.org/apt/trusty/ llvm-toolchain-trusty-3.8 main' >> /etc/apt/sources.list
-#apt-get update -y
-#apt-get install -y clang-3.8 lldb-3.8
+apt-get update -y
+apt-get install -y clang-3.9 lldb-3.9 libc++-dev libc++abi-dev
+
+which clang
+which clang-3.9
 
 #aws s3 cp s3://bin_artifacts/ispc-v1.9.1-linux.tar .
 #tar -xzvf ispc-v1.9.1-linux.tar
