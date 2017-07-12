@@ -16,10 +16,12 @@ echo Build started on `date`
 #apt-get update -y
 #apt-get install -y clang-3.8 lldb-3.8
 
-which aws
 #aws s3 cp s3://bin_artifacts/ispc-v1.9.1-linux.tar .
 #tar -xzvf ispc-v1.9.1-linux.tar
+echo "Print working directory"
 pwd
+wget https://s3.amazonaws.com/bin_artifacts/ispc-v1.9.1-linux.tar
+
 echo "Home directory files"
 ls -la ~/
 echo "Local directory files"
