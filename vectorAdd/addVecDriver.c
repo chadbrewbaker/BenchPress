@@ -19,7 +19,7 @@ int main() {
   int *b = (int *)malloc(sizeof(int) * SIZE);
   void (*addVec)(int *, int *, int *, int);
 
-  void *c_handle = dlopen("addVec.so", RTLD_LAZY);
+  void *c_handle = dlopen("/tmp/addVec.so", RTLD_LAZY);
   if (c_handle == NULL) {
     printf("Error opening addVec.so");
     fputs(dlerror(), stdout);
